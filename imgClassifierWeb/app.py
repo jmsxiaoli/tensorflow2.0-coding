@@ -54,7 +54,7 @@ def upload_image():
         return flask.redirect(flask.url_for(endpoint="predict"))
     return "图片上传失败"
 
-
+#增加默认主页的路由入口
 app.add_url_rule(rule="/upload/", endpoint="upload", view_func=upload_image, methods=["POST"])
 
 def predirect_upload():
